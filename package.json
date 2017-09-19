@@ -1,0 +1,17 @@
+{
+  "name": "cordova-image-resize",
+  "version": "0.0.1",
+  "description": "A plugin for resizing images",
+  "cordova": {
+    "id": "cordova-image-resize",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Shakir Khan",
+  "license": "ISC"
+}

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-image-resize" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>image-resizer</name>
+  <description>A plugin for resizing images.</description>
+  <author>Shakir Khan</author>
+
+  <js-module name="ImgResizer" src="www/resizer.js">
+    <clobbers target="ImgResizer" />
+  </js-module>
+
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="ImgResizer">
+        <param name="android-package" value="org.apache.cordova.resizer.ImgResizer" />
+      </feature>
+    </config-file>
+
+    <config-file parent="/*" target="AndroidManifest.xml">
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </config-file>
+
+    <source-file src="src/android/ImgResizer.java" target-dir="src/org/apache/cordova/resizer" />
+    <source-file src="src/android/FileHelper.java" target-dir="src/org/apache/cordova/resizer" />
+  </platform>
+</plugin>
